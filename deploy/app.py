@@ -4,6 +4,7 @@ import sys
 import os
 import glob
 import re
+import json
 import numpy as np
 
 import tensorflow
@@ -16,6 +17,7 @@ from tensorflow.keras.preprocessing import image
 from flask import Flask,jsonify, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
+import os
 
 # Define a flask app
 app = Flask(__name__)
@@ -24,7 +26,8 @@ app = Flask(__name__)
 #MODEL_PATH = 'model/standard.h5'
 
 # Load your trained model
-model = load_model('./deploy/model/model.h5')
+print(os.getcwd())
+model = load_model('./model/model.h5')
 #model._make_predict_function()          # Necessary
 # print('Model loaded. Start serving...')
 
@@ -74,6 +77,7 @@ def upload():
             basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
 
+
         # Make prediction
         prod = {0 : '5 Star', 1 : 'Good Day Butter Cookies', 2 : 'Good Day Cashew Cookies', 3 : "Ching's Noodles", 4 : 'Good Day Choco Chip Cookies',
                 5 : 'Dabur Gulabari', 6 : 'Dark Fantasy Choco Fills', 7 : 'Dettol Antiseptic', 8 : 'Doritos Nacho Cheesa', 9 : 'Fanta',
@@ -89,12 +93,12 @@ def upload():
         for key, value in prod.items():
             if pred == key:
                 import pandas as pd
-                database=pd.read_csv("/workspace/Retail-Product-Classification/deploy/static/bigbasketProducts.csv")
+                database=pd.read_csv("./static/bigbasketProducts.csv")
                 v=database[database["Product_Name"].str.contains(value)]
                 # print(v)
-                v.to_csv("/workspace/Retail-Product-Classification/deploy/static/new_add.csv")
+                v.to_csv("./static/new_add.csv")
                 out = v.to_json(orient='records')[1:-1].replace('},{', '} {')
-                with open("/workspace/Retail-Product-Classification/deploy/static/catalogue.json","w") as outfile:
+                with open("./static/catalogue.json","a") as outfile:
                     json.dump(out, outfile)
                 v="{Product Name:"+v["Product_Name"].tolist()[0]+" Brand Name:"+ v["Brand_Name"].tolist( )[0] +" Category Name:" + v["Product_Category"].tolist()[0]+"<br> Product Weight:"+ str(v["Product_Weight"].tolist()[0])+" Product_Description:" + v["Product_Description"].tolist()[0]+" Product_SP:"+ str(v["Product_SP"].tolist()[0])+" Product_MRP:"+str(v["Product_MRP"].tolist()[0])+"}"
                 # print(v)
