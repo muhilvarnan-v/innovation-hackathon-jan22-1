@@ -2,6 +2,10 @@
 
 ## Demo Video
  - [Video](https://drive.google.com/file/d/1cY25cpOymtANuhM6Pp4YQY9__uX78iNf/view)
+
+## Submission Document
+ - [Download](https://github.com/Open-network-for-digital-commerce/innovation-hackathon-jan22/raw/team-soochee/Team%20Soochee%20Submission%20Sheet-%20Innovation%20Track.xlsx)
+ 
 ### Services
  - Frontend - [README.md](/frontend/README.md)
  - Backend - [README.md](/backend/README.md)
