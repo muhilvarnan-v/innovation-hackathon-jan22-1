@@ -323,16 +323,16 @@ defmodule Eoq.Inventory do
   def randomize(seller_id) do
     Repo.delete_all(Product)
     products = [
-      {"01", "Maggie noodles", 12, 7, 1, 0.5, 0.1, 90},
-      {"02", "Good day cashew cookies", 19, 10, 2, 0.4, 0.05, 93},
-      {"03", "Lays Cream and Onion Flavour Chips", 19, 7, 1, 0.6, 0.06, 94},
-      {"04", "Lays Indian Magic Chips", 19, 7, 1, 0.6, 0.06, 94},
-      {"05", "Bingo Original Style Chips", 9, 7, 1, 0.4, 0.08, 92},
-      {"06", "Kissan Mixed Fruit Jam", 65, 10, 2, 0.6, 0.04, 96},
-      {"07", "Parle G Biscuits", 10, 7, 1, 0.5, 0.03, 97},
-      {"08", "Britannia Little Hearts Biscuits", 10, 7, 1, 0.4, 0.08, 85},
-      {"09", "Apsara Scholars Kit", 232, 15, 3, 0.6, 0.05, 90},
-      {"10", "Reynolds Pen Pack", 60, 15, 3, 0.6, 0.03, 97}
+      {"01", "Maggie noodles", 12, 7, 1, 50, 10, 90},
+      {"02", "Good day cashew cookies", 19, 10, 2, 40, 5, 93},
+      {"03", "Lays Cream and Onion Flavour Chips", 19, 7, 1, 60, 6, 94},
+      {"04", "Lays Indian Magic Chips", 19, 7, 1, 60, 6, 94},
+      {"05", "Bingo Original Style Chips", 9, 7, 1, 40, 8, 92},
+      {"06", "Kissan Mixed Fruit Jam", 65, 10, 2, 60, 4, 96},
+      {"07", "Parle G Biscuits", 10, 7, 1, 50, 3, 97},
+      {"08", "Britannia Little Hearts Biscuits", 10, 7, 1, 40, 8, 85},
+      {"09", "Apsara Scholars Kit", 232, 15, 3, 60, 5, 90},
+      {"10", "Reynolds Pen Pack", 60, 15, 3, 60, 3, 97}
     ]
 
     Enum.each(products, fn {id, name, price, review_time_days, lead_time_days, cost_holding,
