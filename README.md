@@ -11,14 +11,7 @@ source venv/bin/activate
 python3 -m pip install -r requirements.txt
 python3 app.py
 ```
-once up and running, open the following links to see the challenge submissions:
-    - http://localhost:8000/challenge7/casea
-    - http://localhost:8000/challenge7/caseb
-    - http://localhost:8000/challenge7/casec
-    - http://localhost:8000/challenge7/cased
-    - http://localhost:8000/challenge8
-
-Or See Live here:
+Or See Live Demo here:
     - https://api.gdbx.in/challenge7/casea
     - https://api.gdbx.in/challenge7/caseb
     - https://api.gdbx.in/challenge7/casec
