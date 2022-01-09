@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/ondcMapTracking.js"></script>
+    <title>ONDC Challenge7 - case a</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .filter-section {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+        .info-section {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
+        select {
+            appearance: none;
+            background-color: transparent;
+            border: 1px solid black;
+            padding: 0.3em 0;
+            margin: 0;
+            width: 100%;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: inherit;
+            line-height: inherit;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h2 class="text-center"><u>ONDC Innovation Hackathon</u></h2>
+        <h3 class="text-center"><u>Challenge 7 -Delivery Route Optimization
+            </u></h3>
+    </section>
+    <section class="info-section">
+       <div class="col-sm-12 col-md-6 border border-light">           
+        <div class="form-group ml-2" id="problemOutputSection" style="display: none;">
+            <h4><u>Solution</u></h4>
+            <h5 id="routeCountText"></h5>
+            <ul id="problemOutputList">
+            </ul>
+        
+            <!-- <button class="btn btn-primary" id="clearPlotting">Clear plotting</button> -->
+        </div>
+    </div>
+    </section>
+    <section>
+        <div id="map"></div>
+    </section>
+</body>
+<script>
+    var sampleProblemSets = {
+        "case_a_data": {
+            "visit_data": 
+                [
+                [12.91360646586131, 77.62900129779217],
+                [12.915435540570027, 77.63448657592814],
+                [12.919093649816887, 77.64632322874786],
+                [12.922611012032958, 77.64848847011733],
+                [12.909526174039156, 77.65151980803456],
+
+                [12.911073878778549, 77.59190349566205],
+                [12.903757371961172, 77.59262524278519],
+                [12.91712390534, 77.5804998911162],
+                [12.92964558782235, 77.58973825429258],
+                [12.92289239887014, 77.59926531631821],
+
+                [12.948919309270112, 77.6170202955478],
+                [12.94132254583445, 77.62135077828674],
+                [12.947934556701426, 77.63001174376458],
+                [12.947934556701426, 77.63001174376458],
+                [12.944276870236957, 77.5903156519911],
+
+                [12.967488200233676, 77.69323679175287],
+                [12.955953142999913, 77.6877515136169],
+                [12.9434327811229, 77.69496898484844],
+                [12.932740738362389, 77.7057951916957],
+                [12.954827742949787, 77.68241058490557],
+
+                [12.974240181387382, 77.53300892464769],
+                [12.966503521716024, 77.53387502119547],
+                [12.949059988511728, 77.5400820464546],
+                [12.93766476298275, 77.54542297516595],
+                [12.936117223056216, 77.53748375681124],
+                ]
+        } 
+    }
+
+    var routingPathsSolution = []
+    var map_init = initializeMap("map");
+    window.map_init = map_init
+    var drawRoutePaths = drawRoute(routingPathsSolution, [], false);
+    handleSubmit()
+
+    function handleSubmit(){
+        const params = new URLSearchParams(window.location.search)
+        let numberOfVehicles = parseInt(params.get('vehicles')) || 1;
+        let startIndex = parseInt(params.get('startNode')) || 0;
+        //var centerCoordinates = $("#centerCoordinates").val();
+        console.log('startIndex is ', startIndex)
+        console.log('cenndf ', sampleProblemSets.case_a_data.visit_data[startIndex])
+        var centerCoordinates = sampleProblemSets.case_a_data.visit_data[startIndex];
+        var visits = JSON.parse(JSON.stringify(sampleProblemSets.case_a_data.visit_data));
+        visits.splice(startIndex, 1)
+
+        //var visits = $("#visits").val();
+        if(!numberOfVehicles || parseInt(numberOfVehicles) <= 0){
+            alert("Invalid value of number of vehicles")
+        } else {
+            //numberOfVehicles = parseInt(numberOfVehicles)
+            if(!centerCoordinates){
+                alert("Center coordinates field required")
+            } else {
+                //var finalCenterCoordinates = centerCoordinates.split(",")
+                var finalCenterCoordinates = centerCoordinates
+                if (finalCenterCoordinates.length <2){
+                    alert("Invalid Center coordinates provided")
+                } else {
+                    //finalCenterCoordinates = finalCenterCoordinates.map((item) => parseFloat(item.trim()))
+                    console.log('final coordinates', finalCenterCoordinates)
+                    if(!visits){
+                        alert("visits coordinates required")
+                    } else {
+                        var finalVisitCoordinates = visits
+                        console.log('final visit coordinates are', finalVisitCoordinates)
+                        if(finalVisitCoordinates.length <= 0){
+                            alert("Please check if the visit coordinates are correct")
+                        } else {
+                            var payload = {
+                                "store": finalCenterCoordinates,
+                                //"visits": finalVisitCoordinates,
+                                "visits": visits,
+                                "vehicles": numberOfVehicles,
+                            }
+                            if(params.get('roadClosedNode')){
+                                let roadClosedNode = parseInt(params.get('roadClosedNode')) || 2;
+                                payload["roadClosedNode"] = roadClosedNode;
+                            }
+                            console.log("payload is ", payload)
+                            solveRoutingProblem(payload)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    function solveRoutingProblem(payload){
+        var selectedProblemSetIndex = $("#standard-select").val()
+        var selectedProblemSet = sampleProblemSets[selectedProblemSetIndex]
+        {$.ajax({
+            type: 'POST',
+            url: "/challenge7/api/solve",
+            data: JSON.stringify(payload),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (res) {
+                console.log('response', res)
+                if(res && res.status === 0){
+                    routingPathsSolution = res.data.routingPaths;
+                    console.log('routing solution : ', routingPathsSolution)
+                    document.getElementById("routeCountText").innerText = routingPathsSolution.length + " routes in total:"
+                    if($("#problemOutputList").length > 0){
+                        $("#problemOutputList").empty();
+                    }
+                    let randomColorsList = ["#0000ff", "#008000", "#FFFF00", "#228b22", "#2f4f4f", "#8b0000", "#dc143c", "#00008b", "#000000", "#FFFFFF"]
+                    for(let i=0; i < routingPathsSolution.length; i++){
+                        //randomColorsList.push(generateRandomColor())
+                        $("#problemOutputList").append(
+                            `<li><b>Route ${i+1}:</b> ${routingPathsSolution[i].length} visits <span style="font-size: larger; color: ${randomColorsList[i]}">&#x25cf;</span></li>`
+                            )
+                        }
+                    $("#problemOutputSection").show()
+                    $("#availableSolutionPath").show()
+                    let avgLats = 0
+                    let avgLngs = 0
+                    let coordinatesCount = 0
+                    for(let j=0; j<routingPathsSolution.length; j++){
+                        for (let k=0; k<routingPathsSolution[j].length; k++){
+                            coordinatesCount += 1
+                            avgLats += routingPathsSolution[j][k][0]
+                            avgLngs += routingPathsSolution[j][k][1]
+                        }
+                    }
+                    avgLats = avgLats/coordinatesCount
+                    avgLngs = avgLngs/coordinatesCount
+                    let newCenterCoordinates = [avgLats, avgLngs]
+                    map_init.setView(new window.L.LatLng(newCenterCoordinates[0], newCenterCoordinates[1]), 13)
+                    drawRoutePaths = drawRoute(routingPathsSolution, randomColorsList, true);
+                } else {
+                    console.log("error:", res.message)
+                    alert(res.message)
+                }
+                //location.reload()
+            },
+            error: function (err, error) {
+                message = "Operation failed"
+                alert(message)
+            }
+        })}
+    }
+
+    $("#clearPlotting").click(function() {
+        clearMapContents()
+    })
+</script>
+
+</html>
