@@ -5,6 +5,10 @@
  - Backend - [README.md](/backend/README.md)
  - VoiceToText - [README.md](/voiceToTextService/README.md)
 
+
+## `Architecture Diagram`
+![Architecture Diagram](/frontend/docs/images/architecture-diagram-FrontEnd.jpg)
+
 ### Schema
 
 #### Store
