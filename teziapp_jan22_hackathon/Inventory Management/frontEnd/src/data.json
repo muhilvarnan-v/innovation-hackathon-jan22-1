@@ -1,0 +1,28 @@
+{
+"revenue":{ 
+  "Expected revenue":"number",
+  "Previous revenue":"number",
+},
+
+ "Profit":{ 
+  "Expected profit":"number",
+  "Previous profit":"number",
+},
+
+"order list":{
+"orderid":"id",
+"productid":"id",
+"ProductName":"string",
+
+"price":{
+"mrp":"number",
+"salePrice":"number",	
+"costPrice":"number",
+},
+
+"productCategory":"string",
+
+"Timestamp":"unix"
+},
+
+}
