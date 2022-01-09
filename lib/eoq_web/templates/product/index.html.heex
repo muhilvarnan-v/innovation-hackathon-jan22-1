@@ -1,0 +1,50 @@
+<h1 class="text-xl font-bold">Products</h1>
+
+<div class="my-10 flex gap-5">
+  <%= link "+ Add product", to: Routes.product_path(@conn, :new), class: "custom-button" %>
+</div>
+
+<%= for product <- @products do %>
+  <div class="w-full mb-10 lg:max-w-full lg:flex">
+    <div class="border border-gray-400 bg-white rounded p-4 flex flex-col justify-between leading-normal w-full">
+      <div class="mb-8">
+        <p class="text-sm text-gray-600 flex items-center">
+          #<%= product.external_product_id %>
+        </p>
+
+        <div class="flex items-center">
+          <div class="text-gray-900 font-bold text-xl mb-2"><%= product.name %></div>
+          <div class="ml-auto">
+            <%= link "Edit", to: Routes.product_path(@conn, :edit, product), class: "custom-button-secondary mr-3"%>
+            <%= link "Delete", to: Routes.product_path(@conn, :delete, product), class: "custom-button-danger", method: :delete, data: [confirm: "Are you sure?"] %>
+          </div>
+        </div>
+      </div>
+
+      <div class="gap-5 mb-5 text-sm flex">
+        <div class="bg-gray-100 p-2 rounded"><div>Reorder every</div> <div class="font-bold"><%= review_time_days(product) %> days</div></div>
+        <div class="bg-gray-100 p-2 rounded"><div>Stock delivery time</div> <div class="font-bold"><%= lead_time_days(product) %> days</div></div>
+        <div class="bg-gray-100 p-2 rounded"><div>Holding cost</div> <div class="font-bold"><%= cost_holding(product) %>%</div></div>
+        <div class="bg-gray-100 p-2 rounded"><div>Stock-out cost</div> <div class="font-bold"><%= cost_stockout(product) %>%</div></div>
+        <div class="bg-gray-100 p-2 rounded"><div>Price</div> <div class="font-bold"><%= price(product) %></div></div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5">
+        <div class="p-5 bg-blue-200 rounded text-sm font-light">
+          <div class="text-sm text-gray-600">Configured</div>
+          <div class="font-bold text-lg">Service level <span><%= service_level(product) %></span>%</div>
+          <div>Lot size <span class="font-bold"><%= lot_size(product) %></span></div>
+          <div>Cost <span class="font-bold"><%= cost(product) %></span></div>
+        </div>
+
+        <div class="p-5 bg-pink-200 rounded text-sm font-light">
+          <div class="text-sm text-gray-600">Optimum</div>
+          <div class="font-bold text-lg">Service level <span><%= optimum_service_level(product) %></span>%</div>
+          <div>Lot size <span class="font-bold"><%= optimum_lot_size(product) %></span></div>
+          <div>Cost <span class="font-bold"><%= optimum_cost(product) %></span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>
