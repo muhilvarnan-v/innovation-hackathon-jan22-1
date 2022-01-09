@@ -133,7 +133,6 @@ function AddProductPage() {
                     id="outlined-textarea"
                     style={{ width: '100%', marginLeft: 5, marginRight: 5 }}
                     label={t("Enter text to search")}
-                    placeholder="Placeholder"
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                 />
@@ -151,7 +150,7 @@ function AddProductPage() {
                             variant="outlined"
                             onClick={() => window.location = '/product/add'}
                             style={{ width: '90%', marginTop: 10 }}
-                        >{t('Add item')}</Button>
+                        >{t('Add Item')}</Button>
 
                     </Grid>
                 </Grid>

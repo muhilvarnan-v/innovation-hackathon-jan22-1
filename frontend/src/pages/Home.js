@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import { useTranslation } from 'react-i18next';
 
 const StyledFab = styled(Fab)({
     position: 'absolute',
@@ -38,7 +39,7 @@ const style = {
 };
 
 function HomePage() {
-
+    const { t } = useTranslation();
     const [products, setProducts] = useState([])
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -82,19 +83,19 @@ function HomePage() {
             <Box sx={style}>
                 {!syncCompleted ? <Fragment>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Sync your products
+                        {t("Sync your products")}
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2, mb: 2 }}>
-                        You have {10} products in your catalog. please press publish button to push to cloud
+                        {t("You have 10 products in your catalog. please press publish button to push to cloud")}
                     </Typography>
-                    <Button variant="contained" startIcon={<CloudSyncIcon />} onClick={() => setSyncCompleted(true)}>Publish</Button>
+                    <Button variant="contained" startIcon={<CloudSyncIcon />} onClick={() => setSyncCompleted(true)}>{t("Publish")}</Button>
                 </Fragment> :
                     <Fragment>
                         <ThumbUpIcon style={{ fontSize: '80px' }} color="success" />
                         <Typography id="modal-modal-title" variant="h6" component="h2">
-                            your products has been synced successfully
+                            {t("your products has been synced successfully")}
                         </Typography>
-                        <Button variant="contained" onClick={handleClose}>Ok</Button>
+                        <Button variant="contained" onClick={handleClose}>{t("Ok")}</Button>
                     </Fragment>
                 }
             </Box>
@@ -105,6 +106,13 @@ function HomePage() {
 
     return (
         <Layout mainActionComponent={mainAction} mainLeftActionComponent={mainLeftAction}>
+            {
+                !products.length ? <Fragment>
+                    <Typography id="modal-modal-title" variant="h6" style={{ textAlign: 'center', marginTop: '50%' }} component="h2">
+                        {t("No Products in your catalog, Please press + icon to add items to your catalog")}
+                    </Typography>
+                </Fragment> : null
+            }
             {
                 products.map((product, key) => <ProductItem key={key} product={product} isEditable={true} />)
 
