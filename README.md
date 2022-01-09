@@ -55,3 +55,6 @@
 
 ### Proposal
 - [Open standards based format for external data feeds](ExportFeed.md) 
+
+#### Team
+![team](/team.png)
