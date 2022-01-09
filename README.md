@@ -8,25 +8,42 @@
 ### Schema
 
 #### Store
- - ID
- - Number
- - Address
- - Payment Modes: [‘UPI’, ‘CASH’]
- - Fulfilment Modes: [‘in-store pickup’, ‘home delivery’]
+ - id
+ - name
+ - contactNumberList
+ - location
+ - catalog
 
 #### Master Catalogue Item
- - ID
- - SKU
- - MRP
- - Parent Category
- - Sub Category
- - Weight
- - Unit
+ - id
+ - barcode
+ - sku
+ - weight
+ - unit
+ - mrp
+ - image128
+ - image256
+ - parentCategory
+ - subCategory
+ - additionalInfo
 
-#### Store Catalogue Item
- - ID
- - SKU
- - MRP
- - Selling Price
- - Quantity
+#### Master Added Store catalog Item
+ - id
+ - masterId
+ - price
+ - quantity
 
+#### Manual Added Store Catalogue Item
+ - id
+ - barcode
+ - sku
+ - weight
+ - unit
+ - mrp
+ - image128
+ - image256
+ - parentCategory
+ - subCategory
+ - additionalInfo
+ - price
+ - quantity
