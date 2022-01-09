@@ -85,6 +85,8 @@ The swagger API documentation has been implemented.
 
 - [Video Link](https://drive.google.com/file/d/1lFogyDgcSndmyOeRPu385E3WK2KeTEWj/view?usp=sharing)
 
+- [Submission sheet](https://github.com/bhalgat20/innovation-hackathon-jan22/blob/main/Team-Homies-Innovation-Challenge-6/Homies%20-%20Submission%20Sheet-%20Innovation%20Track.xlsx)
+
 - API Documentation link
 http://ondchomiestw.eastus.cloudapp.azure.com:3000/docs
 - **Retail prediction endpoint** 
