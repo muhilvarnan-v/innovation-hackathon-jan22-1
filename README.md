@@ -7,9 +7,6 @@
  - Backend - [README.md](/backend/README.md)
  - VoiceToText - [README.md](/voiceToTextService/README.md)
 
-### Proposal
-- [Open standards based format for external data feeds](ExportFeed.md) 
-
 ## `Architecture Diagram`
 ![Architecture Diagram](/frontend/docs/images/architecture-diagram-FrontEnd.jpg)
 
@@ -55,3 +52,6 @@
  - additionalInfo
  - price
  - quantity
+
+### Proposal
+- [Open standards based format for external data feeds](ExportFeed.md) 
