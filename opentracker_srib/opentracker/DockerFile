@@ -1,0 +1,33 @@
+
+ARG profile=dev
+ARG version=0.0.1
+
+FROM maven:3.6-jdk-8-alpine as build
+
+ARG profile
+ARG version
+
+#Building opentracker
+WORKDIR '/opentracker'
+COPY ./opentracker/pom.xml ./pom.xml
+RUN mvn dependency:go-offline -B
+COPY ./opentracker/src/main ./src/main
+RUN mvn clean package -P ${profile}
+
+FROM openjdk:8-alpine
+
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
+
+ARG profile
+ARG version
+ENV env $profile
+
+#Copying source + resource files for execution.
+COPY --from=build ./opentracker/target/opentracker-${env}-${version}.jar opentracker.jar
+USER root
+RUN apk add curl
+
+EXPOSE 8090
+
+CMD java -jar -Dspring.profiles.active=${env} opentracker.jar

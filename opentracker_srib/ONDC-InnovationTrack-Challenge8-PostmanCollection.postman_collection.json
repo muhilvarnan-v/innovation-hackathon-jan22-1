@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "d69cf919-1941-4f72-939b-c3797d8f891b",
+		"name": "ONDC-InnovationTrack-Challenge8-PostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8090/track/addOrderLocationInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"buyer\": {\r\n        \"latitude\": 12.947094,\r\n        \"longitude\": 77.607972\r\n    },\r\n    \"seller\": {\r\n        \"latitude\": 12.991344,\r\n        \"longitude\": 77.690163\r\n    },\r\n    \"deliverAgent\": {\r\n        \"latitude\": 12.991344,\r\n        \"longitude\": 77.690163\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/track/addOrderLocationInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"track",
+						"addOrderLocationInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/track/trackInfo-by-id?trackingId=6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/track/trackInfo-by-id?trackingId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"track",
+						"trackInfo-by-id"
+					],
+					"query": [
+						{
+							"key": "trackingId",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

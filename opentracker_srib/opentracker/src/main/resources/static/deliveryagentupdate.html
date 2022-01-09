@@ -1,0 +1,71 @@
+<html>
+<head>
+	<!-- Utility/supprting file to update the delivery agents location. Its actual implementation left to delivery app.-->
+    <title>Delivery Agent Update</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script type="text/javascript">
+		var stompClient = null;
+		function setConnected(connected) {
+			document.getElementById('connect').disabled = connected;
+			document.getElementById('disconnect').disabled = !connected;
+			document.getElementById('conversationDiv').style.visibility
+			  = connected ? 'visible' : 'hidden';
+			document.getElementById('response').innerHTML = '';
+		}
+
+		function connect() {
+			var socket = new SockJS('/locationUpdate-websocket');
+			stompClient = Stomp.over(socket);
+			stompClient.connect({}, function(frame) {
+				setConnected(true);
+				console.log('Connected: ' + frame);
+			});
+		}
+
+		function disconnect() {
+			if(stompClient != null) {
+				stompClient.disconnect();
+			}
+			setConnected(false);
+			console.log("Disconnected");
+		}
+
+		function sendMessage() {
+
+			stompClient.send("/app/updateLocation", {}, JSON.stringify({'location': {'latitude':parseFloat($("#latitude").val()),'longitude':parseFloat($("#longitude").val())},'trackingId':$("#trackingId").val()}));
+		}
+
+		function showMessageOutput(messageOutput) {
+			var response = document.getElementById('response');
+			var p = document.createElement('p');
+			p.style.wordWrap = 'break-word';
+			p.appendChild(document.createTextNode(messageOutput.from + ": "
+			  + messageOutput.text + " (" + messageOutput.time + ")"));
+			response.appendChild(p);
+		}
+		connect();
+	</script>
+</head>
+<body onload="disconnect()">
+<div>
+
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">
+            Disconnect
+        </button>
+    </div>
+    <br />
+    <div id="conversationDiv">
+        <input type="text" id="trackingId" placeholder="Please enter trackingId"/>
+        <input type="text" id="latitude" placeholder="Please enter Latitude"/>
+        <input type="text" id="longitude" placeholder="Please enter Longitude"/>
+        <button id="sendMessage" onclick="sendMessage();">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+
+</body>
+</html>
