@@ -1,6 +1,7 @@
 # Open standards based format for external data feeds - Proposal
 
 ## Architecture Diagram
+![Architecture Diagram](/exportFeed.jpg)
 
 ### API's Schema
 
