@@ -261,7 +261,7 @@ While the code is running, you can watch the events populating on the web consol
    }
    ```
 
-** NOTE **: CORD does not store personally identifiable information (PII) or the business data linked to the transaction on the chain.
+**NOTE**: CORD does not store personally identifiable information (PII) or the business data linked to the transaction on the chain.
 
 
 ## Network Operations
