@@ -1,0 +1,7 @@
+{
+    "fullProductURL": "https://ceeacms.azure-api.net/api/products/",
+    "categoryURL" : "https://ceeacms.azure-api.net/api/categories/",
+    "loginURL" : "https://ceeacms.azure-api.net/authentication/users/authenticate/",
+    "assetUploadURL":"https://ceeacms.azure-api.net/upload/assetupload/",
+    "productURL":"https://ceeacms.azure-api.net/api/products/"
+}

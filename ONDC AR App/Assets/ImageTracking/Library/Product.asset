@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: Product
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5172690253515465707
+  m_GuidHigh: 16598824326865860529
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5341563827772026698
+      m_GuidHigh: 10298691439770833284
+    m_SerializedTextureGuid:
+      m_GuidLow: 8837455557201419052
+      m_GuidHigh: 1497731916566919018
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Painting
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4941437332726911627
+      m_GuidHigh: 12947191124798024100
+    m_SerializedTextureGuid:
+      m_GuidLow: 9882188858797230710
+      m_GuidHigh: 17137303632306836522
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Sofa
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5279159301894395342
+      m_GuidHigh: 5656908652918516130
+    m_SerializedTextureGuid:
+      m_GuidLow: 3748334118434083422
+      m_GuidHigh: 17337655705314804394
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: TableChair
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5308518327125183970
+      m_GuidHigh: 7236161198270665133
+    m_SerializedTextureGuid:
+      m_GuidLow: 14291203531774098897
+      m_GuidHigh: 9820216719245111369
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Rug
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5104929778267571554
+      m_GuidHigh: 2838434866518982048
+    m_SerializedTextureGuid:
+      m_GuidLow: 5166981661349077740
+      m_GuidHigh: 5871714626212955609
+    m_Size: {x: 0.1, y: 0.1}
+    m_SpecifySize: 1
+    m_Name: Plant
+    m_Texture: {fileID: 0}
