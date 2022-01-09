@@ -1,0 +1,81 @@
+﻿<!--
+    IMPORTANT:
+    - Policy elements can appear only within the <inbound>, <outbound>, <backend> section elements.
+    - To apply a policy to the incoming request (before it is forwarded to the backend service), place a corresponding policy element within the <inbound> section element.
+    - To apply a policy to the outgoing response (before it is sent back to the caller), place a corresponding policy element within the <outbound> section element.
+    - To add a policy, place the cursor at the desired insertion point and select a policy from the sidebar.
+    - To remove a policy, delete the corresponding policy statement from the policy document.
+    - Position the <base> element within a section element to inherit all policies from the corresponding section element in the enclosing scope.
+    - Remove the <base> element to prevent inheriting policies from the corresponding section element in the enclosing scope.
+    - Policies are applied in the order of their appearance, from the top down.
+    - Comments within policy elements are not supported and may disappear. Place your comments between policy elements or at a higher level scope.
+-->
+<policies>
+  <inbound>
+    <cors>
+      <allowed-origins>
+        <origin>*</origin>
+      </allowed-origins>
+      <allowed-methods>
+        <method>GET</method>
+        <method>POST</method>
+        <method>PUT</method>
+        <method>DELETE</method>
+        <method>PATCH</method>
+      </allowed-methods>
+      <allowed-headers>
+        <header>*</header>
+      </allowed-headers>
+      <expose-headers>
+        <header>*</header>
+      </expose-headers>
+    </cors>
+    <choose>
+      <when condition="@(!context.Request.Headers.ContainsKey("Authorization="""))">
+        <return-response>
+          <set-status code="401" reason="Unauthorized" />
+        </return-response>
+      </when>
+    </choose>
+    <!-- check the cache for secret first -->
+    <cache-lookup-value key="@(context.Request.Headers.GetValueOrDefault("Authorization=""").AsBasic().UserId)" variable-name="keyvaultsecretResponse" />
+    <!-- call Key Vault if not found in cache -->
+    <choose>
+      <when condition="@(!context.Variables.ContainsKey("keyvaultsecretResponse="""))">
+        <send-request mode="new" response-variable-name="keyvaultsecret" timeout="20" ignore-error="false">
+          <set-url>
+            @{
+            return "https://ceeabsckvresource.vault.azure.net/secrets/" + context.Request.Headers.GetValueOrDefault("Authorization").AsBasic().UserId + "/?api-version=7.0";
+            }
+          </set-url>
+          <set-method>GET</set-method>
+          <authentication-managed-identity resource="https://vault.azure.net" />
+        </send-request>
+        <!-- transform response to string and store in cache -->
+        <set-variable name="keyvaultsecretResponse" value="@((string)((IResponse)context.Variables["keyvaultsecret="""]).Body.As<JObject>
+          ()["value"])" />
+          <cache-store-value key="@(context.Request.Headers.GetValueOrDefault("Authorization=""").AsBasic().UserId)" value="@((string)context.Variables["keyvaultsecretResponse="""])" duration="3600" />
+        </when>
+    </choose>
+    <!--Check if password from the Authorization header matches the secret value from the Key Vault -->
+    <choose>
+      <when condition="@(context.Request.Headers.GetValueOrDefault("Authorization=""").AsBasic().Password!= (string)context.Variables["keyvaultsecretResponse="""])">
+        <return-response>
+          <set-status code="401" reason="Not authorized" />
+        </return-response>
+      </when>
+    </choose>
+    <!--Delete the Authorization header, because it can cause problems at the backend-->
+    <set-header name="Authorization" exists-action="delete" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+  <on-error>
+    <base />
+  </on-error>
+</policies>

@@ -1,0 +1,21 @@
+{
+  "ProductId": "GUID",
+  "ProductName": "Dishwasher",
+  "categoryid": "2",
+  "productDescription": "washer",
+  "productManual": "https://baseurl/manual/manualid",
+  "productSpecification": "Free Standing",
+  "productWarranty": "2 years",
+  "productFeatures": "Eco Mode. IoT enabled",
+  "productModel": "https://baseurl/homeappliance/Dishwasher.glb?sv=tokenvalue",
+  "productCompany": "Generic",
+  "productPreview": "https://baseurl/homeapppliance/Dishwasher.jpg?sv=tokenvalue",
+  "productCreated": "2022-01-09T00:00:00",
+  "productAuthor": "Bosch",
+  "seller": "newseller",
+  "fullfilmentCriteria": "Home Delivery",
+  "quantity": "7",
+  "price": "41000",
+  "paymentMode": "Cash",
+  "currency": "INR"
+}
