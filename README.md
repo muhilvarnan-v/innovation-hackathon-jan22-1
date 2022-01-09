@@ -5,6 +5,8 @@ Demo URL: https://alme.tech
 This is the repository that houses the solution to the ONDC Grand Hackathon
 Challenge 6 - Inventory Management.
 
+How we tackled the challenge and came up with the algorithm is detailed in [this document](https://github.com/almetech/innovation-hackathon-jan22/blob/18c2ac50da9864748f5098b3341dc5b009cacc5b/solution_detail.pdf).
+
 ### API endpoints
 
 #### Request headers
