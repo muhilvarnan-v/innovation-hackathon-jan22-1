@@ -83,7 +83,8 @@ The swagger API documentation has been implemented.
 
 ## Demo Details
 
-- [Video Link](https://drive.google.com/file/d/1lFogyDgcSndmyOeRPu385E3WK2KeTEWj/view?usp=sharing)
+- Retail Model [Video Link](https://drive.google.com/file/d/1lFogyDgcSndmyOeRPu385E3WK2KeTEWj/view?usp=sharing)
+- Logistics Model [Video Link](https://drive.google.com/file/d/1Ibb9oa9zw5s8k2tG7jns0hQ9ne-I_dUT/view)
 
 - [Submission sheet](https://github.com/bhalgat20/innovation-hackathon-jan22/blob/main/Team-Homies-Innovation-Challenge-6/Homies%20-%20Submission%20Sheet-%20Innovation%20Track.xlsx)
 
