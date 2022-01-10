@@ -7,10 +7,12 @@
 
 <main>
 	<Router>
+		<!-- The home screen -->
 		<Route path="/">
-			<Home />
+			<Home storeName="Ravi's Kirana" />
 		</Route>
 
+		<!-- The catalog management screen -->
 		<Route path="/catalog">
 			<Catalog />
 		</Route>

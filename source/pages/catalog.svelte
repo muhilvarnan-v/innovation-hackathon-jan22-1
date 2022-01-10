@@ -1,40 +1,43 @@
 <script lang="ts">
-	import Carousel from 'svelte-carousel'
 	import {
 		ShoppingBagIcon,
 		ShoppingCartIcon,
-		PlusIcon,
-		MinusIcon,
 		MicIcon,
 		SearchIcon,
+		XIcon,
 	} from 'svelte-feather-icons'
-	import FuzzySearch from 'fuzzysort'
+
+	import ProductList from '../components/product-list.svelte'
+	import CategoryList from '../components/category-list.svelte'
+	import VoiceInput from '../components/voice-input.svelte'
+
+	import { go as fuzzySearch } from 'fuzzysort'
 	import { nanoid as generateId } from 'nanoid'
 
-	import SpeechToTextHelper from '../util/stt-helper'
+	import type { Product } from '../types'
 
-	const allCategories = [
+	// NOTE: Hardcoded
+	const categories = [
 		{
 			id: 'tH151Sj@m',
 			name: 'Jams',
 			image: '/images/categories/jams.png',
+			relatedCategories: [],
 		},
 		{
 			id: 'tH151Sn00dl3',
 			name: 'Noodles',
 			image: '/images/categories/noodles.png',
+			relatedCategories: [],
 		},
 	]
-	const allProducts = [
+	const products = [
 		{
 			id: 'k155@Nm1X3dFry1tJ@M',
 			name: 'Kissan Mixed Fruit Jam',
 			description:
 				'Kissan Mixed Fruit Jam is a delicious blend of 8 different fruits Pineapple, Orange, Apple, Grape, Mango, Pear, Papaya, and Banana.',
-			image: {
-				thumbnail: '/images/products/kissan-mixed-fruit-jam.thumbnail.png',
-				fullsize: '/images/products/kissan-mixed-fruit-jam.fullsize.png',
-			},
+			image: '/images/products/kissan-mixed-fruit-jam.png',
 			category: 'tH151Sj@m',
 			quantity: {
 				magnitude: 500,
@@ -45,313 +48,150 @@
 				currency: 'INR',
 			},
 			inventory: 3,
-			payment: ['upi', 'cash', 'credit-card', 'debit-card', 'neft'],
+			payment: ['upi', 'cash'],
 			channel: 'online',
+			relatedProducts: [],
 		},
 	]
 
-	let carousel
-	let category = undefined
-	let products = undefined
-
-	let title = 'Catalog'
-	let recognizedText = ''
-	let productToCreate = {
-		id: '',
-		name: '',
-		description: '',
-		image: {
-			thumbnail: '',
-			fullsize: '',
-		},
-		category: '',
-		quantity: {
-			magnitude: 0,
-			unit: '',
-		},
-		price: {
-			amount: 0,
-			currency: '',
-		},
-		inventory: 0,
-		channel: '',
+	// View state that control which view is shown
+	const view = {
+		title: 'Catalog',
+		focus: 'categories', // categories | search | create-product
+		state: {},
 	}
 
-	let shouldShowCreateItemView = false
-	let shouldShowVoiceSearch = false
-	let isListeningForVoiceInput = false
-
+	/**
+	 * Filter the list of products based on the selected category.
+	 *
+	 * @param {string} categoryId - The selected category's ID.
+	 */
 	const filterProductsByCategory = (categoryId: string) => {
-		carousel.goTo(
-			allCategories.findIndex((category) => category.id === categoryId),
+		view.state.category = categoryId
+		view.state.products = products.filter(
+			(product) => product.category === categoryId,
 		)
-
-		category = categoryId
-		products = allProducts.filter((product) => product.category === categoryId)
 	}
-	const incrementInventory = (productId: string) => {
-		const productIndex = allProducts.findIndex(
+
+	/**
+	 * Update a product in the list.
+	 *
+	 * @param {Product} updatedProduct - The updated version of the product. The product ID should never be updated and may be used to find the existing product.
+	 */
+	const updateProduct = (updatedProduct: Product) => {
+		const productIndex = products.findIndex(
 			(product) => product.id === productId,
 		)
-		allProducts[productIndex].inventory += 1
+		products[productIndex].inventory += 1
 
-		filterProductsByCategory(allProducts[productIndex].category)
+		// Re-render the list of products
+		filterProductsByCategory(updatedProduct.category)
 	}
-	const decrementInventory = (productId: string) => {
-		const productIndex = allProducts.findIndex(
-			(product) => product.id === productId,
-		)
-		allProducts[productIndex].inventory -= 1
 
-		filterProductsByCategory(allProducts[productIndex].category)
-	}
-	const showVoiceSearch = () => {
-		shouldShowCreateItemView = false
-		shouldShowVoiceSearch = true
-		title = 'Search'
-	}
-	const showCreateItemView = () => {
-		shouldShowVoiceSearch = false
-		shouldShowCreateItemView = true
-		title = 'Create Item'
-	}
-	const startVoiceSearch = () => {
-		const productNames = allProducts.map((product) => product.name)
-		const grammar =
-			'#JSGF V1.0; grammar names; public <name> = ' +
-			productNames.join(' | ') +
-			' ;'
-
-		let speechToTextHelper
-		try {
-			speechToTextHelper = new SpeechToTextHelper(grammar)
-
-			isListeningForVoiceInput = true
-			console.log(isListeningForVoiceInput)
-
-			speechToTextHelper.start((error?: Error, text?: string) => {
-				if (error) {
-					products = []
-					recognizedText = 'Error'
-
-					return
-				}
-
-				isListeningForVoiceInput = false
-				recognizedText = text
-
-				products = FuzzySearch.go(recognizedText, products, {
-					key: 'name',
-				}).map((result) => result.obj)
-
-				if (products.length < 1) prefilledProductName = recognizedText
-			})
-		} catch {
-			console.log(
-				'STT unsupported on anything except Chrome Desktop and Android',
-			)
+	/**
+	 * Show the voice search panel.
+	 */
+	const showVoiceSearchPanel = () => {
+		view.focus = 'search'
+		view.title = 'Search'
+		view.state = {
+			isListening: false,
+			error: undefined,
+			recognizedText: undefined,
 		}
 	}
-	const createProductFromInput = () => {
-		productToCreate.id = generateId()
-		productToCreate.quantity.unit = 'grams'
-		productToCreate.price.currency = 'INR'
 
-		allProducts.push(productToCreate)
+	/**
+	 * Hide the voice search panel.
+	 */
+	const hideVoiceSearchPanel = () => {
+		view.focus = 'categories'
+		view.title = 'Catalog'
+		view.state = {}
+	}
+
+	/**
+	 * Callback fired when we receive the results of speech recognition.
+	 */
+	const onSpeechRecognition = (error?: Error, text?: string) => {
+		view.state.products = []
+
+		// If there is an error, display it and return
+		if (error) {
+			view.state.error =
+				'An error occurred while recognizing voice input. Have you given this app permission to access your microphone?'
+			return
+		}
+
+		// If we recognize any text, search the list of products for a matching name
+		view.state.recognizedText = text
+		view.state.products = fuzzySearch(view.state.recognizedText, products, {
+			key: 'name',
+		}).map((result) => result.obj)
 	}
 </script>
 
 <main>
-	<h1 class="rounded">{title}</h1>
+	<!-- The page title -->
+	<h1 class="rounded">{view.title}</h1>
 
+	<!-- The main content on the page is in this table -->
 	<table class="center">
 		<tr>
-			{#if shouldShowVoiceSearch}
-				{#if isListeningForVoiceInput}
-					<div>
-						<img
-							style="height: 4em; width: 4em"
-							class="center"
-							src="/gifs/sound.gif"
-							alt="Listening..."
+			<table style="width: 100%">
+				{#if view.focus === 'search'}
+					<!-- This part is only shown if the user presses the 'Product Search' button -->
+					<tr>
+						<!-- The voice input component takes a list of words and returns the recognized text on its own -->
+						<VoiceInput
+							wordList={products.map((product) => product.name)}
+							onInput={onSpeechRecognition}
 						/>
-					</div>
+					</tr>
+					<tr>
+						<!-- If there is any error while listening for voice input, show it here -->
+						{#if view.state.error}
+							<p class="message error">{view.state.error}</p>
+						{/if}
+						<!-- Once the voice input has been converted to text, show a 'Searching...' message -->
+						{#if view.state.recognizedText}
+							<p class="message">
+								Searching for products matching '{view.state.recognizedText}'
+							</p>
+						{/if}
+					</tr>
 				{:else}
-					<div on:click={startVoiceSearch}>
-						<MicIcon size="42" />
-					</div>
+					<!-- By default, the first row is a carousel of product categories -->
+					<tr>
+						<span class="title left-align"> Categories </span>
+						<CategoryList {categories} onSelect={filterProductsByCategory} />
+					</tr>
 				{/if}
-				<br />
-				{#if recognizedText}
-					<p>Searching for product: {recognizedText}</p>
-				{/if}
-			{:else if shouldShowCreateItemView}
-				<div class="input-box center center-vertical">
-					<label for="item-name-input">Name</label>
-					<input
-						id="item-name-input"
-						type="text"
-						value={productToCreate.name}
-					/>
-					<label for="item-desc-input">Description</label>
-					<input
-						id="item-desc-input"
-						type="text"
-						value={productToCreate.description}
-					/>
-					<label for="item-price-input">Price</label>
-					<input
-						id="item-price-input"
-						type="number"
-						value={productToCreate.price.amount}
-					/>
-					<label for="item-quantity-input">Quantity</label>
-					<input
-						id="item-quantity-input"
-						type="number"
-						value={productToCreate.quantity.magnitude}
-					/>
-					<label for="item-stock-input">Available Inventory</label>
-					<input
-						id="item-stock-input"
-						type="number"
-						value={productToCreate.inventory}
-					/>
-					<label for="item-channel-input">Available Inventory</label>
-					<select name="cars" id="cars">
-						<option
-							value="online"
-							on:click={() => (productToCreate.channel = 'online')}
-							>Home delivery</option
-						>
-						<option
-							value="offline"
-							on:click={() => (productToCreate.channel = 'offline')}
-							>Pick-up from store</option
-						>
-					</select>
-					<div on:click={createProductFromInput}><span>Create Item</span></div>
-				</div>
-			{:else}
-				<td>
-					<span class="title left-align"> Categories </span>
-					<div class="carousel">
-						<Carousel
-							id="catalog-carousel"
-							class="center"
-							particlesToShow={2}
-							bind:this={carousel}
-						>
-							{#each allCategories as category}
-								<div class="card category-card">
-									<table
-										class="center"
-										on:click={() => filterProductsByCategory(category.id)}
-									>
-										<tr>
-											<img src={category.image} alt={category.name} />
-										</tr>
-										<tr>
-											<span class="title">{category.name}</span>
-										</tr>
-									</table>
-								</div>
-							{/each}
-						</Carousel>
-					</div>
-				</td>
-			{/if}
+			</table>
 		</tr>
+
+		<!-- Show a list of products (either based on the category selected or the search query entered) -->
 		<tr>
-			{#if shouldShowCreateItemView}
-				<div />
-			{:else if products === undefined}
-				<span class="message"> Select a category to view its products </span>
-			{:else if products.length < 1 && !recognizedText}
-				<span class="message">
-					That category does not have any products yet
-				</span>
-			{:else if products.length < 1 && recognizedText}
-				<div class="message" on:click={showCreateItemView}>
-					Could not find a product with that name. Click this message to add a
-					new product with that name.
-				</div>
-			{:else}
-				<table style="width: 100%">
-					<td>
-						<span class="title left-align">Products</span>
-					</td>
-					<td>
-						<div class="title right-align" on:click={showCreateItemView}>
-							<PlusIcon size="24" />
+			<table style="width: 100%">
+				<td>
+					<span class="title left-align"> Products </span>
+				</td>
+				<td>
+					{#if view.focus === 'search'}
+						<!-- Show a close icon if the search panel is in focus -->
+						<div class="title right-align" on:click={hideVoiceSearchPanel}>
+							<XIcon size="24" />
 						</div>
-						<div class="title right-align" on:click={showVoiceSearch}>
+					{:else}
+						<!-- Show a search icon if the search panel isn't in focus -->
+						<div class="title right-align" on:click={showVoiceSearchPanel}>
 							<SearchIcon size="24" />
 						</div>
-					</td>
-				</table>
-
-				<div class="items">
-					{#each products as product}
-						<div>
-							<table class="center">
-								<tr>
-									<table>
-										<tr>
-											<td class="center-vertical">
-												<img
-													class="center-vertical left-align"
-													src={product.image.thumbnail}
-													alt={product.name}
-												/>
-											</td>
-											<td colspan="2">
-												<span class="title left-align">
-													{product.name}
-												</span>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span class="message left-align">
-													{product.quantity.magnitude}
-													{product.quantity.unit}
-												</span>
-											</td>
-											<td>
-												<span class="message left-align">
-													{product.price.currency}
-													{product.price.amount}
-												</span>
-											</td>
-											<td>
-												<div
-													style="display: inline-block"
-													on:click={() => decrementInventory(product.id)}
-												>
-													<MinusIcon size="24" />
-												</div>
-												<span
-													style="display: inline-block"
-													class="message left-align"
-												>
-													{product.inventory}
-												</span>
-												<div
-													style="display: inline-block"
-													on:click={() => incrementInventory(product.id)}
-												>
-													<PlusIcon size="24" />
-												</div>
-											</td>
-										</tr>
-									</table>
-								</tr>
-							</table>
-						</div>
-					{/each}
-				</div>
-			{/if}
+					{/if}
+				</td>
+			</table>
+			<!-- The list of filtered products -->
+			<ProductList products={view.state.products} />
 		</tr>
 	</table>
 </main>
@@ -375,6 +215,7 @@
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 10%;
 		width: 42em;
 		padding-bottom: 2em;
 	}
@@ -392,15 +233,6 @@
 		border-spacing: 2em 0;
 	}
 
-	input[type='text'] {
-		display: block;
-		border: none;
-		border-bottom: 2px solid #1f2633;
-	}
-	label {
-		display: block;
-	}
-
 	.center {
 		margin-left: auto;
 		margin-right: auto;
@@ -413,11 +245,6 @@
 		overflow: auto;
 		padding: 2em;
 		padding-left: 1.1em;
-	}
-	.center-vertical {
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 0.5em;
 	}
 	.left-align {
 		display: block;
@@ -442,34 +269,7 @@
 		font-weight: 400;
 		margin: 0.2em;
 	}
-
-	.input-box {
-		display: block;
-		float: left;
-	}
-
-	.card {
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-		border-radius: 1em;
-		padding: 0.2em;
-	}
-	.card:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	}
-	.card:active {
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-	}
-
-	.category-card {
-		height: 12em;
-		width: 4em;
-		max-height: 12em;
-		margin: 0.5em 2em;
-	}
-
-	.carousel {
-		overflow: auto;
-		max-width: 26em;
-		margin: 2em;
+	.error {
+		color: 'red';
 	}
 </style>
