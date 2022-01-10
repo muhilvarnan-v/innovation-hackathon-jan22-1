@@ -20,6 +20,7 @@ specifiers:
   svelte-carousel: ^1.0.17-rc4
   svelte-check: ^2.2.11
   svelte-feather-icons: ^3.5.0
+  svelte-multiselect: ^3.0.1
   svelte-navigator: ^3.1.5
   svelte-preprocess: ^4.10.1
   tslib: ^2.3.1
@@ -47,6 +48,7 @@ devDependencies:
   svelte-carousel: 1.0.17-rc4
   svelte-check: 2.2.11_e96f4d52bd1c8515c0d20e6e80d234e0
   svelte-feather-icons: 3.5.0
+  svelte-multiselect: 3.0.1
   svelte-navigator: 3.1.5_svelte@3.45.0+typescript@4.5.4
   svelte-preprocess: 4.10.1_a17f5a8d3a56bfa627dafcd2eac19250
   tslib: 2.3.1
@@ -980,6 +982,10 @@ packages:
     resolution: {integrity: sha512-AO6vwbI+WH8xouZRIxyenUV2olSAjp0QFgBa4esyS9ZxvBmKkRu9VTfgbMW0F1N7QTOWbMpgaForsnOcFGfXeg==}
     dependencies:
       svelte: 3.45.0
+    dev: true
+
+  /svelte-multiselect/3.0.1:
+    resolution: {integrity: sha512-9gypAKLn1rN/S9ni3Uee5RPGIgXcXlBhyLYYzwd401cykdNpDnljW25hZDMhBh3/Trzu6N3dgadyJe/3YLPFIA==}
     dev: true
 
   /svelte-navigator/3.1.5_svelte@3.45.0+typescript@4.5.4:

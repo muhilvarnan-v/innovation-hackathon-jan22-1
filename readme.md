@@ -164,9 +164,9 @@ To use the web app, follow these instructions:
 ## Implementation Status
 
 - [x] A schema that describes a product.
-- [ ] A web component that enables a kirana store owner to:
+- [x] A web component that enables a kirana store owner to:
   - [x] search their catalog with voice input.
-  - [ ] add a new product to the catalog.
+  - [x] add a new product to the catalog.
 - [ ] API server with endpoints to retrieve and update the crowdsourced catalog.
 
 ## License

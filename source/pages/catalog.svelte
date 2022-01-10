@@ -1,23 +1,17 @@
 <script lang="ts">
-	import {
-		ShoppingBagIcon,
-		ShoppingCartIcon,
-		MicIcon,
-		SearchIcon,
-		XIcon,
-	} from 'svelte-feather-icons'
+	import { SearchIcon, PlusIcon, XIcon } from 'svelte-feather-icons'
 
 	import ProductList from '../components/product-list.svelte'
 	import CategoryList from '../components/category-list.svelte'
 	import VoiceInput from '../components/voice-input.svelte'
+	import CreateProduct from '../components/create-product.svelte'
 
 	import { go as fuzzySearch } from 'fuzzysort'
-	import { nanoid as generateId } from 'nanoid'
 
 	import type { Product } from '../types'
 
 	// NOTE: Hardcoded
-	const categories = [
+	let categories = [
 		{
 			id: 'tH151Sj@m',
 			name: 'Jams',
@@ -31,7 +25,7 @@
 			relatedCategories: [],
 		},
 	]
-	const products = [
+	let products = [
 		{
 			id: 'k155@Nm1X3dFry1tJ@M',
 			name: 'Kissan Mixed Fruit Jam',
@@ -49,7 +43,7 @@
 			},
 			inventory: 3,
 			payment: ['upi', 'cash'],
-			channel: 'online',
+			channel: ['online'],
 			relatedProducts: [],
 		},
 	]
@@ -72,7 +66,6 @@
 			(product) => product.category === categoryId,
 		)
 	}
-
 	/**
 	 * Update a product in the list.
 	 *
@@ -80,12 +73,27 @@
 	 */
 	const updateProduct = (updatedProduct: Product) => {
 		const productIndex = products.findIndex(
-			(product) => product.id === productId,
+			(product) => product.id === updatedProduct.id,
 		)
-		products[productIndex].inventory += 1
+		products[productIndex] = updatedProduct
 
 		// Re-render the list of products
 		filterProductsByCategory(updatedProduct.category)
+	}
+	/**
+	 * Add a product to the list.
+	 *
+	 * @param {Product} product - The product to add.
+	 */
+	const addProduct = (product: Product) => {
+		products.push(product)
+		// For svelte to re-render stuff, re-assign the variable
+		products = products
+
+		// Hide the create product panel
+		hidePanels()
+		// Re-render the list of products
+		filterProductsByCategory(product.category)
 	}
 
 	/**
@@ -100,11 +108,18 @@
 			recognizedText: undefined,
 		}
 	}
-
 	/**
-	 * Hide the voice search panel.
+	 * Show the create product panel.
 	 */
-	const hideVoiceSearchPanel = () => {
+	const showCreateProductPanel = () => {
+		view.focus = 'create-product'
+		view.title = 'Create Product'
+		view.state = {}
+	}
+	/**
+	 * Hide the create product or voice search panel.
+	 */
+	const hidePanels = () => {
 		view.focus = 'categories'
 		view.title = 'Catalog'
 		view.state = {}
@@ -133,65 +148,91 @@
 
 <main>
 	<!-- The page title -->
-	<h1 class="rounded">{view.title}</h1>
+	<h1 class="rounded">Manage Catalog</h1>
 
 	<!-- The main content on the page is in this table -->
 	<table class="center">
 		<tr>
 			<table style="width: 100%">
-				{#if view.focus === 'search'}
-					<!-- This part is only shown if the user presses the 'Product Search' button -->
-					<tr>
-						<!-- The voice input component takes a list of words and returns the recognized text on its own -->
-						<VoiceInput
-							wordList={products.map((product) => product.name)}
-							onInput={onSpeechRecognition}
-						/>
-					</tr>
-					<tr>
-						<!-- If there is any error while listening for voice input, show it here -->
-						{#if view.state.error}
-							<p class="message error">{view.state.error}</p>
-						{/if}
-						<!-- Once the voice input has been converted to text, show a 'Searching...' message -->
-						{#if view.state.recognizedText}
-							<p class="message">
-								Searching for products matching '{view.state.recognizedText}'
-							</p>
-						{/if}
-					</tr>
-				{:else}
-					<!-- By default, the first row is a carousel of product categories -->
-					<tr>
-						<span class="title left-align"> Categories </span>
-						<CategoryList {categories} onSelect={filterProductsByCategory} />
-					</tr>
-				{/if}
+				<tr>
+					<td>
+						<span class="title left-align"> {view.title} </span>
+					</td>
+					{#if view.focus !== 'categories'}
+						<td>
+							<div class="title right-align" on:click={hidePanels}>
+								<XIcon size="24" />
+							</div>
+						</td>
+					{/if}
+				</tr>
+				<tr>
+					{#if view.focus === 'create-product'}
+						<!-- This part is only shown if the user presses the 'Create Product' button -->
+						<CreateProduct onSave={addProduct} {categories} />
+					{:else if view.focus === 'search'}
+						<!-- This part is only shown if the user presses the 'Product Search' button -->
+						<tr>
+							<!-- The voice input component takes a list of words and returns the recognized text on its own -->
+							<VoiceInput
+								wordList={products.map((product) => product.name)}
+								onInput={onSpeechRecognition}
+							/>
+						</tr>
+						<tr>
+							<!-- If there is any error while listening for voice input, show it here -->
+							{#if view.state.error}
+								<p class="message error">{view.state.error}</p>
+							{/if}
+							<!-- Once the voice input has been converted to text, show a 'Searching...' message -->
+							{#if view.state.recognizedText}
+								<p class="message">
+									Searching for products matching '{view.state.recognizedText}'
+								</p>
+							{/if}
+						</tr>
+					{:else}
+						<!-- By default, the top panel is a carousel of product categories -->
+						<tr>
+							<CategoryList {categories} onSelect={filterProductsByCategory} />
+						</tr>
+					{/if}
+				</tr>
 			</table>
 		</tr>
 
 		<!-- Show a list of products (either based on the category selected or the search query entered) -->
 		<tr>
 			<table style="width: 100%">
-				<td>
-					<span class="title left-align"> Products </span>
-				</td>
-				<td>
-					{#if view.focus === 'search'}
-						<!-- Show a close icon if the search panel is in focus -->
-						<div class="title right-align" on:click={hideVoiceSearchPanel}>
-							<XIcon size="24" />
-						</div>
-					{:else}
-						<!-- Show a search icon if the search panel isn't in focus -->
+				{#if view.focus === 'categories'}
+					<!-- Else show the title bar and action buttons -->
+					<td>
+						<span class="title left-align"> Products </span>
+					</td>
+					<td>
 						<div class="title right-align" on:click={showVoiceSearchPanel}>
 							<SearchIcon size="24" />
 						</div>
-					{/if}
-				</td>
+					</td>
+					<td>
+						<div class="title right-align" on:click={showCreateProductPanel}>
+							<PlusIcon size="24" />
+						</div>
+					</td>
+				{/if}
 			</table>
 			<!-- The list of filtered products -->
-			<ProductList products={view.state.products} />
+			{#if view.focus !== 'create-product'}
+				<ProductList
+					products={view.state.products}
+					emptyListMessage={view.focus === 'categories'
+						? 'Select a category to view its products'
+						: view.focus === 'search'
+						? 'Click the microphone icon and speak your search query'
+						: ''}
+					{updateProduct}
+				/>
+			{/if}
 		</tr>
 	</table>
 </main>

@@ -62,6 +62,7 @@ export default {
 		}),
 		commonjs(),
 		typescript({
+			tsconfig: './tsconfig.json',
 			sourceMap: !production,
 			inlineSources: !production,
 		}),

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Router, Route, Link } from 'svelte-navigator'
+	import { Link } from 'svelte-navigator'
 	import { ShoppingBagIcon, ShoppingCartIcon } from 'svelte-feather-icons'
 
 	import NotificationDrawer from '../components/notification-drawer.svelte'
@@ -28,7 +28,7 @@
 		<!-- The first row shows the store owner's notifications -->
 		<tr>
 			<td colspan="2">
-				<NotificationDrawer class="hardcoded" {notifications} />
+				<NotificationDrawer {notifications} />
 			</td>
 		</tr>
 

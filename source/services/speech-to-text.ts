@@ -63,17 +63,17 @@ class SpeechToTextHelper {
 		this.recognizer.onspeechend = () => this.recognizer.stop()
 		// Fired when voice recognition is complete
 		this.recognizer.onresult = (event) => {
-			console.log('Heard the following:', event)
+			console.debug('Heard the following:', event)
 			callback(undefined, event.results[0][0].transcript)
 		}
 		// Fired when no word from the list was recognized
 		this.recognizer.onnomatch = (event) => {
-			console.log('Could not recognize word from list:', event)
+			console.debug('Could not recognize word from list:', event)
 			callback(new Error('cannot-recognize'))
 		}
 		// Fired when there was an error listening for input
 		this.recognizer.onerror = (event) => {
-			console.log('Errororrrrr:', event)
+			console.debug('An error occurred:', event)
 			callback(new Error('unknown-error'))
 		}
 	}

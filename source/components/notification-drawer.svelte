@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type Notification from '../types'
+	import type { Notification } from '../types'
 
 	/**
 	 * A list of notifications. To be passed in as a prop to the `NotificationDrawer`

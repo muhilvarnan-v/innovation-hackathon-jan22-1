@@ -6,8 +6,17 @@
  */
 export type Quantity = {
 	magnitude: number
-	// prettier-ignore
-	unit: | 'milligram' | 'grams' | 'kilograms' | 'millilitres' | 'litres' | 'tons' | 'millimetres' | 'centimetres' | 'metres' | 'kilometres'
+	unit:
+		| 'milligram'
+		| 'grams'
+		| 'kilograms'
+		| 'millilitres'
+		| 'litres'
+		| 'tons'
+		| 'millimetres'
+		| 'centimetres'
+		| 'metres'
+		| 'kilometres'
 }
 
 /**
@@ -16,7 +25,7 @@ export type Quantity = {
 export type Price = {
 	amount: number
 	// prettier-ignore
-	currency: | 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ARS' | 'AUD' | 'AZN' | 'BAM' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BND' | 'BOB' | 'BRL' | 'BWP' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EEK' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'GBP' | 'GEL' | 'GHS' | 'GNF' | 'GTQ' | 'HKD' | 'HNL' | 'HRK' | 'HUF' | 'IDR' | 'ILS' | 'INR' | 'IQD' | 'IRR' | 'ISK' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KHR' | 'KMF' | 'KRW' | 'KWD' | 'KZT' | 'LBP' | 'LKR' | 'LTL' | 'LVL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MOP' | 'MUR' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PHP' | 'PKR' | 'PLN' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SDG' | 'SEK' | 'SGD' | 'SOS' | 'SYP' | 'THB' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VND' | 'XAF' | 'XOF' | 'YER' | 'ZAR' | 'ZMK' | 'ZWL'
+	currency: 'AED' | 'AFN' | 'ALL' | 'AMD' | 'ARS' | 'AUD' | 'AZN' | 'BAM' | 'BDT' | 'BGN' | 'BHD' | 'BIF' | 'BND' | 'BOB' | 'BRL' | 'BWP' | 'BYN' | 'BZD' | 'CAD' | 'CDF' | 'CHF' | 'CLP' | 'CNY' | 'COP' | 'CRC' | 'CVE' | 'CZK' | 'DJF' | 'DKK' | 'DOP' | 'DZD' | 'EEK' | 'EGP' | 'ERN' | 'ETB' | 'EUR' | 'GBP' | 'GEL' | 'GHS' | 'GNF' | 'GTQ' | 'HKD' | 'HNL' | 'HRK' | 'HUF' | 'IDR' | 'ILS' | 'INR' | 'IQD' | 'IRR' | 'ISK' | 'JMD' | 'JOD' | 'JPY' | 'KES' | 'KHR' | 'KMF' | 'KRW' | 'KWD' | 'KZT' | 'LBP' | 'LKR' | 'LTL' | 'LVL' | 'LYD' | 'MAD' | 'MDL' | 'MGA' | 'MKD' | 'MMK' | 'MOP' | 'MUR' | 'MXN' | 'MYR' | 'MZN' | 'NAD' | 'NGN' | 'NIO' | 'NOK' | 'NPR' | 'NZD' | 'OMR' | 'PAB' | 'PEN' | 'PHP' | 'PKR' | 'PLN' | 'PYG' | 'QAR' | 'RON' | 'RSD' | 'RUB' | 'RWF' | 'SAR' | 'SDG' | 'SEK' | 'SGD' | 'SOS' | 'SYP' | 'THB' | 'TND' | 'TOP' | 'TRY' | 'TTD' | 'TWD' | 'TZS' | 'UAH' | 'UGX' | 'USD' | 'UYU' | 'UZS' | 'VEF' | 'VND' | 'XAF' | 'XOF' | 'YER' | 'ZAR' | 'ZMK' | 'ZWL'
 }
 
 /**
@@ -27,7 +36,14 @@ export type Channel = 'online' | 'offline'
 /**
  * The mode of payment accepted by the store owner for that product.
  */
-export type PaymentMode = 'upi' | 'cash' | 'credit-card' | 'debit-card' | 'neft'
+export type PaymentMode =
+	| 'upi'
+	| 'cash'
+	| 'cheque'
+	| 'demand-draft'
+	| 'credit-card'
+	| 'debit-card'
+	| 'neft'
 
 /**
  * An interface representing a category of products.
@@ -104,12 +120,12 @@ export interface Product {
 	inventory: number
 
 	/**
-	 * Channel of obtaining product: 'online' (home delivery) or 'offline' (pick up from store).
+	 * Channels of obtaining product: 'online' (home delivery) or 'offline' (pick up from store).
 	 */
-	channel: Channel
+	channel: Channel[]
 
 	/**
-	 * Mode of payment accepted for the product.
+	 * Modes of payment accepted for the product.
 	 */
 	payment: PaymentMode[]
 
@@ -123,7 +139,7 @@ export interface Product {
  * An interface representing a basic notification item.
  * TODO: Improve this by adding more fields (date, action, etc.)
  */
-interface Notification {
+export interface Notification {
 	title: string
 	description: string
 }
