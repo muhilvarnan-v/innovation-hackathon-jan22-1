@@ -1,0 +1,44 @@
+[
+    {
+        "transactionName": "AggregatedDataExists",
+        "transactionLabel": "A test AggregatedDataExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "CreateAggregatedData",
+        "transactionLabel": "A test CreateAggregatedData transaction",
+        "arguments": [
+            "001",
+            "some value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "ReadAggregatedData",
+        "transactionLabel": "A test ReadAggregatedData transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "UpdateAggregatedData",
+        "transactionLabel": "A test UpdateAggregatedData transaction",
+        "arguments": [
+            "001",
+            "some other value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "DeleteAggregatedData",
+        "transactionLabel": "A test DeleteAggregatedData transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    }
+]
