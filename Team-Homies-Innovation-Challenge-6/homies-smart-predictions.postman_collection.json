@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3b2f0572-002c-4266-90d3-13fad77d2cec",
+		"name": "homies-smart-predictions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retail lot prediction for a seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"store_id\": \"mum-str-1\",\r\n    \"products\": [\"Rice\",\"Sugar\",\"Notebook\",\"Milk\"],\r\n    \"date\":\"2020-02-09 15:27:49.529933\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.106.131.5:3000/retail/prediction",
+					"protocol": "http",
+					"host": [
+						"20",
+						"106",
+						"131",
+						"5"
+					],
+					"port": "3000",
+					"path": [
+						"retail",
+						"prediction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prediction reqeust for logistic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"distance\": 20,\r\n  \"city\": \"Mumbai\",\r\n  \"weight\": 50,\r\n  \"date\": \"2020-01-09T15:02:58.178Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.106.131.5:3000/logistic/prediction",
+					"protocol": "http",
+					"host": [
+						"20",
+						"106",
+						"131",
+						"5"
+					],
+					"port": "3000",
+					"path": [
+						"logistic",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update data set for retail transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": [\r\n    {\r\n      \"store_id\": \"mum-str-1\",\r\n      \"product_name\": \"Rice\",\r\n      \"date\": \"2022-01-09T15:11:44.906Z\",\r\n      \"quantity\": 100\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.106.131.5:3000/retail/update-data-set",
+					"protocol": "http",
+					"host": [
+						"20",
+						"106",
+						"131",
+						"5"
+					],
+					"port": "3000",
+					"path": [
+						"retail",
+						"update-data-set"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

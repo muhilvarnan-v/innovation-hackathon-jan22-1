@@ -1,0 +1,109 @@
+date,product name,p _ category,store_id,city / District ,eonomical crisis,health crisis,festivals in region ,weather,population density,lot size 
+01/01/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,120.0
+01/02/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,140.0
+01/03/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,130.0
+01/04/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,130.0
+01/05/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,140.0
+01/06/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,150.0
+01/07/2020,Rice,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,150.0
+01/08/2020,Rice,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,120.0
+01/09/2020,Rice,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,120.0
+01/10/2020,Rice,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,140.0
+01/11/2020,Rice,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,120.0
+01/12/2020,Rice,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,150.0
+01/01/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,15.0
+01/02/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,25.0
+01/03/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,25.0
+01/04/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,20.0
+01/05/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,15.0
+01/06/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,10.0
+01/07/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,10.0
+01/08/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,15.0
+01/09/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,15.0
+01/10/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,25.0
+01/11/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,35.0
+01/12/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,35.0
+01/01/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,21.0
+01/02/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,18.0
+01/03/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,22.0
+01/04/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,20.0
+01/05/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,22.0
+01/06/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,21.0
+01/07/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,21.0
+01/08/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,23.0
+01/09/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,21.0
+01/10/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,26.0
+01/11/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,19.0
+01/12/2020,Sugar,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,21.0
+01/01/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,13.0
+01/02/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10.0
+01/03/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,9.0
+01/04/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,11.0
+01/05/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,12.0
+01/06/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,8.0
+01/07/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,7.0
+01/08/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,6.0
+01/09/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,5.0
+01/10/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,5.0
+01/11/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,6.0
+01/12/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,5.0
+01/01/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,19.0
+01/02/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,12.0
+01/03/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,12.0
+01/04/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,12.0
+01/05/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,11.0
+01/06/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,12.0
+01/07/2020,Tea,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,12.0
+01/08/2020,Tea,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,12.0
+01/09/2020,Tea,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,13.0
+01/10/2020,Tea,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,15.0
+01/11/2020,Tea,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,18.0
+01/12/2020,Tea,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,18.0
+01/01/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,0.14
+01/02/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.13
+01/03/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.16
+01/04/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,0.22
+01/05/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,0.24
+01/06/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,0.23
+01/07/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,0.24
+01/08/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,0.19
+01/09/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,0.19
+01/10/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,0.13
+01/11/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,0.12
+01/12/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,0.12
+01/01/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,1.5
+01/02/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,1.5
+01/03/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,4.5
+01/04/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,6.7
+01/05/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,7.0
+01/06/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,9.6
+01/07/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,9.6
+01/08/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,9.8
+01/09/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,7.0
+01/10/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,9.9
+01/11/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,1.9
+01/12/2020,Mask,Non-Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,1.0
+01/01/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,9.0
+01/02/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10.0
+01/03/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10.0
+01/04/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,12.0
+01/05/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,12.0
+01/06/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,14.0
+01/07/2020,Soap,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,14.0
+01/08/2020,Soap,Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,14.0
+01/09/2020,Soap,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,11.0
+01/10/2020,Soap,Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,11.0
+01/11/2020,Soap,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,9.0
+01/12/2020,Soap,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,9.0
+01/01/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,0.1
+01/02/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.3
+01/03/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.4
+01/04/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,0.5
+01/05/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,0.5
+01/06/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,1.1
+01/07/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,1.0
+01/08/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,High,High,Raksh Bandhan,Rainy,24760,1.0
+01/09/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,1.0
+01/10/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,High,High,"Durga puja , Kali Puja",Winter,24760,0.1
+01/11/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,0.0
+01/12/2020,Umbrella ,Non-Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,0.0

@@ -1,0 +1,433 @@
+date,product name,p _ category,store_id,city / District ,eonomical crisis,health crisis,festivals in region ,weather,population density,lot size 
+01/01/2020,Rice,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,100
+01/02/2020,Rice,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,120
+01/03/2020,Rice,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,130
+01/04/2020,Rice,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,150
+01/05/2020,Rice,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,145
+01/06/2020,Rice,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,130
+01/07/2020,Rice,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,140
+01/08/2020,Rice,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,130
+01/09/2020,Rice,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,120
+01/10/2020,Rice,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,110
+01/11/2020,Rice,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,130
+01/12/2020,Rice,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,120
+01/01/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,120
+01/02/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,140
+01/03/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,130
+01/04/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,130
+01/05/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,140
+01/06/2020,Rice,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,150
+01/07/2020,Rice,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,150
+01/08/2020,Rice,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,120
+01/09/2020,Rice,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,120
+01/10/2020,Rice,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,140
+01/11/2020,Rice,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,120
+01/12/2020,Rice,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,150
+01/01/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,10
+01/02/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,20
+01/03/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,20
+01/04/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,15
+01/05/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,10
+01/06/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,5
+01/07/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,5
+01/08/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,10
+01/09/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,10
+01/10/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,20
+01/11/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,30
+01/12/2020,Notebook,Non-Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,30
+01/01/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,15
+01/02/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,25
+01/03/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,25
+01/04/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,20
+01/05/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,15
+01/06/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,10
+01/07/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,10
+01/08/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,15
+01/09/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,15
+01/10/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,25
+01/11/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,35
+01/12/2020,Notebook,Non-Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,35
+01/01/2020,Sugar,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,26
+01/02/2020,Sugar,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,23
+01/03/2020,Sugar,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,27
+01/04/2020,Sugar,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,23
+01/05/2020,Sugar,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,27
+01/06/2020,Sugar,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,26
+01/07/2020,Sugar,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,26
+01/08/2020,Sugar,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,28
+01/09/2020,Sugar,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,26
+01/10/2020,Sugar,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,30
+01/11/2020,Sugar,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,24
+01/12/2020,Sugar,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,25
+01/01/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,21
+01/02/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,18
+01/03/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,22
+01/04/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,20
+01/05/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,22
+01/06/2020,Sugar,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,21
+01/07/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,21
+01/08/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,23
+01/09/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,21
+01/10/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,26
+01/11/2020,Sugar,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,19
+01/12/2020,Sugar,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,21
+01/01/2020,Cold drink,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,15
+01/02/2020,Cold drink,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,12
+01/03/2020,Cold drink,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,12
+01/04/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,14
+01/05/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,14
+01/06/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,10
+01/07/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,10
+01/08/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,9
+01/09/2020,Cold drink,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,8
+01/10/2020,Cold drink,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,8
+01/11/2020,Cold drink,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,8
+01/12/2020,Cold drink,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,8
+01/01/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,13
+01/02/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10
+01/03/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,9
+01/04/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,11
+01/05/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,12
+01/06/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,8
+01/07/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,7
+01/08/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,6
+01/09/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,5
+01/10/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,5
+01/11/2020,Cold drink,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,6
+01/12/2020,Cold drink,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,5
+01/01/2020,Tea,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,15
+01/02/2020,Tea,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,10
+01/03/2020,Tea,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,10
+01/04/2020,Tea,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,10
+01/05/2020,Tea,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,9
+01/06/2020,Tea,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,10
+01/07/2020,Tea,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,9
+01/08/2020,Tea,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,9
+01/09/2020,Tea,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,10
+01/10/2020,Tea,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,13
+01/11/2020,Tea,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,15
+01/12/2020,Tea,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,15
+01/01/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,19
+01/02/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,12
+01/03/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,12
+01/04/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,12
+01/05/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,11
+01/06/2020,Tea,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,12
+01/07/2020,Tea,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,12
+01/08/2020,Tea,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,12
+01/09/2020,Tea,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,13
+01/10/2020,Tea,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,15
+01/11/2020,Tea,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,18
+01/12/2020,Tea,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,18
+01/01/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,0.15
+01/02/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,0.15
+01/03/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,0.17
+01/04/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,0.25
+01/05/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,0.26
+01/06/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,0.26
+01/07/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,0.27
+01/08/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,0.21
+01/09/2020,Sanitizer,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,0.21
+01/10/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,0.16
+01/11/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,0.16
+01/12/2020,Sanitizer,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,0.15
+01/01/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,0.14
+01/02/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.13
+01/03/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.16
+01/04/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,0.22
+01/05/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,0.24
+01/06/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,0.23
+01/07/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,0.24
+01/08/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,0.19
+01/09/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,0.19
+01/10/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,0.13
+01/11/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,0.12
+01/12/2020,Sanitizer,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,0.12
+01/01/2020,Mask,Non Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,2
+01/02/2020,Mask,Non Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,2
+01/03/2020,Mask,Non Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,5
+01/04/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,9
+01/05/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,10
+01/06/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,10
+01/07/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,10
+01/08/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,8
+01/09/2020,Mask,Non Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,7
+01/10/2020,Mask,Non Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,3
+01/11/2020,Mask,Non Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,2
+01/12/2020,Mask,Non Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,1
+01/01/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,1.5
+01/02/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,1.5
+01/03/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,4.5
+01/04/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,6.7
+01/05/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,7
+01/06/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,9.6
+01/07/2020,Mask,Non Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,9.6
+01/08/2020,Mask,Non Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,9.8
+01/09/2020,Mask,Non Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,7
+01/10/2020,Mask,Non Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,9.9
+01/11/2020,Mask,Non Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,1.9
+01/12/2020,Mask,Non Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,1
+01/01/2020,Soap,Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,10
+01/02/2020,Soap,Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,11
+01/03/2020,Soap,Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,12
+01/04/2020,Soap,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,13
+01/05/2020,Soap,Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,13
+01/06/2020,Soap,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,14
+01/07/2020,Soap,Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,12
+01/08/2020,Soap,Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,12
+01/09/2020,Soap,Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,12
+01/10/2020,Soap,Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,11
+01/11/2020,Soap,Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,10
+01/12/2020,Soap,Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,10
+01/01/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,9
+01/02/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10
+01/03/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,10
+01/04/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,12
+01/05/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,12
+01/06/2020,Soap,Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,14
+01/07/2020,Soap,Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,14
+01/08/2020,Soap,Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,14
+01/09/2020,Soap,Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,11
+01/10/2020,Soap,Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,11
+01/11/2020,Soap,Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,9
+01/12/2020,Soap,Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,9
+01/01/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,0.1
+01/02/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Low,Low,,Summer,25357,0.5
+01/03/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,0.5
+01/04/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,0.5
+01/05/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,High,,Summer,25357,0.5
+01/06/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,1.2
+01/07/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,High,,Rainy,25357,1.3
+01/08/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,1.3
+01/09/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,High,Medium,,Rainy,25357,1.3
+01/10/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Medium,Low,Diwali,Winter,25357,0
+01/11/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Medium,Low,,Winter,25357,0
+01/12/2020,Umbrella ,Non Consumable,mum-str-1,Mumbai,Medium,Low,Christmas,Winter,25357,0.1
+01/01/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,Low,New year ,Winter,24760,0.1
+01/02/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.3
+01/03/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,Low,,Summer,24760,0.4
+01/04/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,Medium,Holi,Summer,24760,0.5
+01/05/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,Medium,Eid,Summer,24760,0.5
+01/06/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Low,High,,Rainy,24760,1.1
+01/07/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,High,High,,Rainy,24760,1
+01/08/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,1
+01/09/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,High,Medium,,Rainy,24760,1
+01/10/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,0.1
+01/11/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,High,Low,,Winter,24760,0
+01/12/2020,Umbrella ,Non Consumable,kol-str-1,Kolkatta,Medium,Low,Christmas,Winter,24760,0
+01/01/2020,Rice,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,90
+01/02/2020,Rice,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,110
+01/03/2020,Rice,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,120
+01/04/2020,Rice,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,140
+01/05/2020,Rice,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,135
+01/06/2020,Rice,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,120
+01/07/2020,Rice,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,130
+01/08/2020,Rice,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,120
+01/09/2020,Rice,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,120
+01/10/2020,Rice,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,100
+01/11/2020,Rice,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,120
+01/12/2020,Rice,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,110
+01/01/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,110
+01/02/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,130
+01/03/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,120
+01/04/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,110
+01/05/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,130
+01/06/2020,Rice,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,140
+01/07/2020,Rice,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,140
+01/08/2020,Rice,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,110
+01/09/2020,Rice,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,110
+01/10/2020,Rice,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,130
+01/11/2020,Rice,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,110
+01/12/2020,Rice,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,140
+01/01/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,9
+01/02/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,18
+01/03/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,18
+01/04/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,14.5
+01/05/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,9
+01/06/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,4.8
+01/07/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,4.8
+01/08/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,9
+01/09/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,9
+01/10/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,18
+01/11/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,27
+01/12/2020,Notebook,Non-Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,27
+01/01/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,13.5
+01/02/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,22.5
+01/03/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,22.5
+01/04/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,18
+01/05/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,13.5
+01/06/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,9
+01/07/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,9
+01/08/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,13.5
+01/09/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,13.5
+01/10/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,22.5
+01/11/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,32.5
+01/12/2020,Notebook,Non-Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,32.5
+01/01/2020,Sugar,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,23
+01/02/2020,Sugar,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,20
+01/03/2020,Sugar,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,24
+01/04/2020,Sugar,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,20
+01/05/2020,Sugar,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,24
+01/06/2020,Sugar,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,23
+01/07/2020,Sugar,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,23
+01/08/2020,Sugar,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,25
+01/09/2020,Sugar,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,23
+01/10/2020,Sugar,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,27
+01/11/2020,Sugar,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,21
+01/12/2020,Sugar,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,22
+01/01/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,19
+01/02/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,16
+01/03/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,20
+01/04/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,18
+01/05/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,20
+01/06/2020,Sugar,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,19
+01/07/2020,Sugar,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,19
+01/08/2020,Sugar,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,20
+01/09/2020,Sugar,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,19
+01/10/2020,Sugar,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,23
+01/11/2020,Sugar,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,17
+01/12/2020,Sugar,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,19
+01/01/2020,Cold drink,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,14
+01/02/2020,Cold drink,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,11
+01/03/2020,Cold drink,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,11
+01/04/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,13
+01/05/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,13
+01/06/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,9
+01/07/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,9
+01/08/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,8
+01/09/2020,Cold drink,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,7
+01/10/2020,Cold drink,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,7
+01/11/2020,Cold drink,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,7
+01/12/2020,Cold drink,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,7
+01/01/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,12
+01/02/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,9
+01/03/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,8
+01/04/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,10
+01/05/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,11
+01/06/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,6.5
+01/07/2020,Cold drink,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,5.5
+01/08/2020,Cold drink,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,4.5
+01/09/2020,Cold drink,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,4
+01/10/2020,Cold drink,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,3.5
+01/11/2020,Cold drink,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,4
+01/12/2020,Cold drink,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,4
+01/01/2020,Tea,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,14
+01/02/2020,Tea,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,9.12
+01/03/2020,Tea,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,9
+01/04/2020,Tea,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,8.9
+01/05/2020,Tea,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,8.3
+01/06/2020,Tea,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,9
+01/07/2020,Tea,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,8.6
+01/08/2020,Tea,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,8.5
+01/09/2020,Tea,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,9
+01/10/2020,Tea,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,11.9
+01/11/2020,Tea,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,13.5
+01/12/2020,Tea,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,14
+01/01/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,17
+01/02/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,11
+01/03/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,11
+01/04/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,11.5
+01/05/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,10
+01/06/2020,Tea,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,11
+01/07/2020,Tea,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,11
+01/08/2020,Tea,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,11
+01/09/2020,Tea,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,12
+01/10/2020,Tea,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,13.5
+01/11/2020,Tea,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,17
+01/12/2020,Tea,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,17
+01/01/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,0.13
+01/02/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,0.13
+01/03/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,0.15
+01/04/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,0.21
+01/05/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,0.22
+01/06/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,0.22
+01/07/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,0.24
+01/08/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,0.18
+01/09/2020,Sanitizer,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,0.18
+01/10/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,0.14
+01/11/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,0.14
+01/12/2020,Sanitizer,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,0.15
+01/01/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,0.14
+01/02/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,0.13
+01/03/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,0.16
+01/04/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,0.19
+01/05/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,0.22
+01/06/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,0.21
+01/07/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,0.2
+01/08/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,0.18
+01/09/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,0.16
+01/10/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,0.1
+01/11/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,0.09
+01/12/2020,Sanitizer,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,0.09
+01/01/2020,Mask,Non Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,1
+01/02/2020,Mask,Non Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,1
+01/03/2020,Mask,Non Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,4
+01/04/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,7
+01/05/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,9
+01/06/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,8
+01/07/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,8
+01/08/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,6
+01/09/2020,Mask,Non Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,5
+01/10/2020,Mask,Non Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,1.8
+01/11/2020,Mask,Non Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,1.9
+01/12/2020,Mask,Non Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,0.9
+01/01/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,1.2
+01/02/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,1.1
+01/03/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,4.1
+01/04/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,6.7
+01/05/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,6.7
+01/06/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,9.2
+01/07/2020,Mask,Non Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,9.3
+01/08/2020,Mask,Non Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,9.5
+01/09/2020,Mask,Non Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,6.8
+01/10/2020,Mask,Non Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,9
+01/11/2020,Mask,Non Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,1.5
+01/12/2020,Mask,Non Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,0.8
+01/01/2020,Soap,Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,8
+01/02/2020,Soap,Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,9
+01/03/2020,Soap,Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,10
+01/04/2020,Soap,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,11
+01/05/2020,Soap,Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,11
+01/06/2020,Soap,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,12
+01/07/2020,Soap,Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,11
+01/08/2020,Soap,Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,11
+01/09/2020,Soap,Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,11
+01/10/2020,Soap,Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,9
+01/11/2020,Soap,Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,9
+01/12/2020,Soap,Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,9
+01/01/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,7
+01/02/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,8
+01/03/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,7
+01/04/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,8
+01/05/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,9
+01/06/2020,Soap,Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,11
+01/07/2020,Soap,Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,12
+01/08/2020,Soap,Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,12
+01/09/2020,Soap,Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,9
+01/10/2020,Soap,Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,9
+01/11/2020,Soap,Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,8
+01/12/2020,Soap,Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,8
+01/01/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Low,Low,"New Year ,Makar Sankranti",Winter,25357,0
+01/02/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Low,Low,,Summer,25357,0.4
+01/03/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Low,Medium,Gudhi Padwa,Summer,25357,0.4
+01/04/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,0.3
+01/05/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,High,,Summer,25357,0.4
+01/06/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,1
+01/07/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,High,,Rainy,25357,1.1
+01/08/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,Medium,"Ganesha festival,Raksh Bandhan",Rainy,25357,1.1
+01/09/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,High,Medium,,Rainy,25357,1.1
+01/10/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Medium,Low,Diwali,Winter,25357,0
+01/11/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Medium,Low,,Winter,25357,0
+01/12/2020,Umbrella ,Non Consumable,mum-str-2,Mumbai,Medium,Low,Christmas,Winter,25357,0.1
+01/01/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,Low,New year ,Winter,24760,0.1
+01/02/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,0.2
+01/03/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,Low,,Summer,24760,0.2
+01/04/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,Medium,Holi,Summer,24760,0.3
+01/05/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,Medium,Eid,Summer,24760,0.3
+01/06/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Low,High,,Rainy,24760,1
+01/07/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,High,High,,Rainy,24760,0.8
+01/08/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,High,HIgh,Raksh Bandhan,Rainy,24760,0.8
+01/09/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,High,Medium,,Rainy,24760,0.8
+01/10/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,High,HIgh,"Durga puja , Kali Puja",Winter,24760,0.1
+01/11/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,High,Low,,Winter,24760,0
+01/12/2020,Umbrella ,Non Consumable,kol-str-2,Kolkatta,Medium,Low,Christmas,Winter,24760,0

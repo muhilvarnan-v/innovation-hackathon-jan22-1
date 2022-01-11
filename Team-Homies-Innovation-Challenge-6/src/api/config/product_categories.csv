@@ -1,0 +1,10 @@
+product_name,category
+Rice,Consumable
+Sugar,Consumable
+Sanitizer,Consumable
+Tea,Consumable
+Cold drink,Consumable
+Notebook,Non-Consumable
+Mask,Non-Consumable
+Soap,Consumable
+Umbrella,Non-Consumable
