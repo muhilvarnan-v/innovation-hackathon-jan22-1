@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "ecf04262-a32f-4a2c-a310-ee389c625f5f",
+		"name": "route/optimize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Single pickup, Multi Drop, Multi Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderLocations\": [\n        {\n            \"address\": \"Ascendas Tech Park Tharamani\",\n            \"longitude\": 80.24604698888692,\n            \"latitude\": 12.985064343962454\n        },\n        {\n            \"address\": \"Fort museum\",\n            \"longitude\": 80.28734723901339,\n            \"latitude\": 13.080515090143628\n        },\n        {\n            \"address\": \"Phoenix Market City Velachery\",\n            \"longitude\": 80.21699786001115,\n            \"latitude\": 12.99076713804524\n        },\n        {\n            \"address\": \"Thoraipakkam BBQ\",\n            \"longitude\": 80.23815781524532,\n            \"latitude\": 12.944759186768877\n        },\n        {\n            \"address\": \"Central Railway station\",\n            \"longitude\": 80.27621237532618,\n            \"latitude\": 13.083670338758505\n        },\n        {\n            \"address\": \"Sholinganallur\",\n            \"longitude\": 80.22841984085167,\n            \"latitude\": 12.901309933009536\n        },\n        {\n            \"address\": \"Airport\",\n            \"longitude\": 80.17201995204957,\n            \"latitude\": 12.998083269085368\n        }\n    ],\n    \"criteria\": \"duration\",\n    \"no_of_agents\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.87.89.141:8080/route/optimize/multi-agent/driving",
+					"protocol": "http",
+					"host": [
+						"34",
+						"87",
+						"89",
+						"141"
+					],
+					"port": "8080",
+					"path": [
+						"route",
+						"optimize",
+						"multi-agent",
+						"driving"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multi pickup, Multi Drop, Single delivery agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderLocations\": [\n        {\n            \"pickup\": {\n                \"address\": \"Ascendas Tech Park Tharamani\",\n                \"longitude\": 80.24604698888692,\n                \"latitude\": 12.985064343962454\n            },\n            \"drop\": {\n                \"address\": \"Fort museum\",\n                \"longitude\": 80.28734723901339,\n                \"latitude\": 13.080515090143628\n            }\n        },\n        {\n            \"pickup\": {\n                \"address\": \"Phoenix Market City Velachery\",\n                \"longitude\": 80.21699786001115,\n                \"latitude\": 12.99076713804524\n            },\n            \"drop\": {\n                \"address\": \"Thoraipakkam BBQ\",\n                \"longitude\": 80.23815781524532,\n                \"latitude\": 12.944759186768877\n            }\n        },\n        {\n            \"pickup\": {\n                \"address\": \"Sholinganallur\",\n                \"longitude\": 80.22841984085167,\n                \"latitude\": 12.901309933009536\n            },\n            \"drop\": {\n                \"address\": \"Airport\",\n                \"longitude\": 80.17201995204957,\n                \"latitude\": 12.998083269085368\n            }\n        }\n    ],\n    \"criteria\": \"distance\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://34.87.89.141:8080/route/optimize/multi-delivery/driving",
+					"protocol": "http",
+					"host": [
+						"34",
+						"87",
+						"89",
+						"141"
+					],
+					"port": "8080",
+					"path": [
+						"route",
+						"optimize",
+						"multi-delivery",
+						"driving"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single pickup, Multi Drop, Single delivery agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.87.89.141:8080/route/optimize/driving?locations=80.24604698888692,12.985064343962454;80.28734723901339,13.080515090143628;80.21699786001115,12.99076713804524;80.23815781524532,12.944759186768877;80.27621237532618,13.083670338758505",
+					"protocol": "http",
+					"host": [
+						"34",
+						"87",
+						"89",
+						"141"
+					],
+					"port": "8080",
+					"path": [
+						"route",
+						"optimize",
+						"driving"
+					],
+					"query": [
+						{
+							"key": "locations",
+							"value": "80.24604698888692,12.985064343962454;80.28734723901339,13.080515090143628;80.21699786001115,12.99076713804524;80.23815781524532,12.944759186768877;80.27621237532618,13.083670338758505"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
