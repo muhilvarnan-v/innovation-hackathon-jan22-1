@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAz0P4OlNpXkiHuPAfU1hGqgAAAAACAAAAAAADZgAAwAAAABAAAADyoyGtn0LHvCyGS49ru9hpAAAAAASAAACgAAAAEAAAAGDQ5I7dsye0Vc5crM16GA6AAAAAWT4rBi/T8KrK6RzlMXSwRzbwVMXCMaKE5XyppGf76piNERRr7pDYASj0TL70uYQU/cQR2j7GLI0wXewj6eSlTSUpjAxX37UuWQZoWhqdaLl0TE8+hOgnUbKw9x/QuCh7YbGpstXSy//URP5lfT1gt3zfppa/fXhypm360uGCo0EUAAAAet8OwPrpu/Flo1Wtw8g/opx6PjY=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="EmployeeAppcon">
+      <Value>Data Source=ceerestapi.mysql.database.azure.com%3binitial catalog=restapi%3bUser id=ceeaadmin%40ceerestapi%3b Pwd=admin%40123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

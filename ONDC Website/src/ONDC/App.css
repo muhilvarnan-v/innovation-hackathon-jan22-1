@@ -1,0 +1,135 @@
+body{
+    background-image: "https://apilogsstorage1.blob.core.windows.net/electronics/Chair.jpeg";
+}
+
+.card{
+    text-align: center;
+    padding-top: 10px;
+    opacity: 1;
+    width: 300px;
+    height: 400px;
+    color: rgb(255, 255, 255);
+}
+
+.card-title{
+    color: #262626;
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0 !important;
+    text-align: center;
+}
+
+.container{
+    margin-top: 0px;
+}
+img {
+    display:block;
+    margin:auto;
+}
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+
+
+.follow{
+    background-color: #319795 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 20px !important;
+    height: 50px;
+    width: 200px;
+}
+
+.customButton {
+    width: 150px;
+    height: 50px;
+    letter-spacing: 0.5px;
+    background-color: #234e52;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    }
+
+.active{
+    background-color: #319795;
+    border: 1.5px solid rgb(25, 26, 24);
+    }
+
+.carouselImage
+{
+    width: 200px;
+    height: 200px;
+}
+
+.dropDown
+{
+    background-color: #000;
+}
+
+#babylonJS {
+    width: 100%;
+    height: 100%;
+  }
+
+#babylonJSAuthoring {
+    width: 100%;
+    height: 100%;
+  }
+
+  .boschLogo {
+    height: 60px;
+    width: 240px;
+  }
+
+  .makeInIndiaLogo {
+    height: 100px;
+    width: 200px;
+  }
+
+  .ceeaLogo {
+    height: 132px;
+    width: 400px;
+  }
+
+  .ceeaFooter {
+    height: 33px;
+    width: 100px;
+  }
+
+  .header{
+    background-color: #e8e8e8
+}
+
+.headerIcon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Popup style */
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+.box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
