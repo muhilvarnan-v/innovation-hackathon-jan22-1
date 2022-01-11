@@ -1,0 +1,22 @@
+{
+  "name": "dhiway-hackathon-challenge09",
+  "version": "0.0.1",
+  "repository": "https://github.com/dhiway/cord-scripts",
+  "scripts": {
+    "demo": "yarn ts-node src/ondc-demo.ts"
+  },
+  "dependencies": {
+    "@cord.network/api": "^0.5.2-5",
+    "@multiformats/blake2": "^1.0.5",
+    "@polkadot/util-crypto": "^8.3.1",
+    "multiformats": "^9.4.7",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2",
+    "wait-for-enter": "^1.0.0"
+  },
+  "packageManager": "yarn@3.0.2"
+}
